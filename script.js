@@ -2,6 +2,7 @@
 //lien entre html et js
 const generateur = document.querySelector("#generateur");
 let titre = document.querySelector("h1");
+const liste = document.querySelector("#liste");
 
 //actions déclenchées par le click du bouton
 generateur.addEventListener("click", function(){
@@ -12,4 +13,12 @@ generateur.addEventListener("click", function(){
     //changement de la couleur du texte en celle correspondant au code Hexa affiché
     //càd assigner le contenu du texte généré précedemment à la couleur de ce texte
     titre.style.color = titre.textContent
+
+    //creation d'un item de liste
+    let li = document.createElement("li")
+
+    li.textContent = titre.textContent
+    liste.appendChild(li);
+    li.style.color = titre.textContent
 });
+
