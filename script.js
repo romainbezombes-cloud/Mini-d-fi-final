@@ -35,9 +35,15 @@ generer.addEventListener("click", function(){
     //les convertir en nombre 
     rouge = Number(rouge);
 
-
     //actions des champs couleurs
     if(rouge >= 0 && rouge <= 255) {
-        alert("test 2")
+        if(vert >= 0 && vert <= 255) {
+            if(bleu >= 0 && bleu <= 255) {
+                alert("test")
+            }
+        }
+    }
+    else{
+        alert("Veuillez rentrer des valeurs adéquates pour générer la couleur (comprises entre 0 et 256)")
     }
 });
