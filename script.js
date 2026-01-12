@@ -5,12 +5,6 @@ let couleur = document.querySelector("#couleur");
 const liste = document.querySelector("#liste");
 const generer = document.querySelector("#generer");
 
-
-const rouge = document.querySelector("rouge");
-const vert = document.querySelector("vert");
-const bleu = document.querySelector("bleu");
-
-
 //actions déclenchées par le click du bouton "génerer une couleur aléatoire"
 generateur.addEventListener("click", function(){
 
@@ -33,8 +27,17 @@ generateur.addEventListener("click", function(){
 
 //actions déclenchées par le click du bouton "génerer"
 generer.addEventListener("click", function(){
+    //pour récuperer les valeurs des champs
+    let rouge = document.querySelector("#rouge").value;
+    let vert = document.querySelector("#vert").value;
+    let bleu = document.querySelector("#bleu").value;
+
+    //les convertir en nombre 
+    rouge = Number(rouge);
+
+
     //actions des champs couleurs
-    if(rouge.value === "" ) {
+    if(rouge >= 0 && rouge <= 255) {
         alert("test 2")
     }
 });
