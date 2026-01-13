@@ -52,7 +52,4 @@ generer.addEventListener("click", function(){
             }
         }
     }
-    else{
-        alert("Veuillez rentrer des valeurs adéquates pour générer la couleur (comprises entre 0 et 256)")
-    }
 });
