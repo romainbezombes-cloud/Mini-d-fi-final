@@ -34,12 +34,21 @@ generer.addEventListener("click", function(){
 
     //les convertir en nombre 
     rouge = Number(rouge);
+    vert = Number(vert);
+    bleu = Number(bleu);
 
     //actions des champs couleurs
     if(rouge >= 0 && rouge <= 255) {
         if(vert >= 0 && vert <= 255) {
             if(bleu >= 0 && bleu <= 255) {
-                alert("test")
+                couleur.textContent = '#' + rouge.toString(16).padStart(2, '0') + vert.toString(16).padStart(2, '0') + bleu.toString(16).padStart(2, '0');  
+
+                //même procédé qu'au début
+                couleur.style.color = couleur.textContent
+                let li = document.createElement("li")
+                li.textContent = couleur.textContent
+                liste.appendChild(li);
+                li.style.color = couleur.textContent
             }
         }
     }
